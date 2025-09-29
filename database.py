@@ -25,13 +25,13 @@ def get_db():
     finally:
         db.close()
 
-# ✅ Test connection when you run this file directly
-if __name__ == "__main__":
-    try:
-        with engine.connect() as conn:
-            result = conn.execute(text("SELECT name FROM sys.tables"))
-            print("✅ Connected! Tables in DB:")
-            for row in result:
-                print("-", row[0])
-    except Exception as e:
-        print("❌ Connection failed:", e)
+# # ✅ Test connection when you run this file directly
+# if __name__ == "__main__":
+#     try:
+#         with engine.connect() as conn:
+#             result = conn.execute(text("SELECT name FROM sys.tables"))
+#             print("✅ Connected! Tables in DB:")
+#             for row in result:
+#                 print("-", row[0])
+#     except Exception as e:
+#         print("❌ Connection failed:", e)
